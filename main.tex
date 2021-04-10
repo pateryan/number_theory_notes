@@ -1,5 +1,17 @@
 \documentclass[a4paper]{book}
 
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{cleveref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}[theorem]
+\newtheorem{lemma}{Lemma}[theorem]
+\newtheorem{proposition}{Proposition}[theorem]
+
+
 \title{Number Theory Notes}
 \date{\today}
 \author{Patrick Ryan}
@@ -7,10 +19,6 @@
 \begin{document}
 \maketitle
 
-\chapter{The Fundamental Theorem of Arithmetic}
-
-\section{Euclid's Division Lemma}
-
-Test
+\input{fundamental_theorem_of_arithmetic}
 
 \end{document}

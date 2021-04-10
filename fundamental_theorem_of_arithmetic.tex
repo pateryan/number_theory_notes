@@ -1,0 +1,59 @@
+\chapter{The Fundamental Theorem of Arithmetic}
+
+In this chapter, we outline the basis of elementary number theory: the divisibility, division, and prime numbers.
+
+\section{Euclid's Division Lemma}
+
+This section is devoted to preparing the definitions and results required in the proving of Euclid's famous \textit{division lemma} (\Cref{thm:euclid_lemma}).
+
+\begin{theorem}[Euclid's Division Lemma]\label{thm:euclid_lemma}
+	For any integers $k$ and $j$, there exists unique integers $q$ and $r$ such that $0 \leq r < |k|$ and
+	\begin{equation}
+		j = qk + r.
+	\end{equation}
+\end{theorem}
+
+
+We end this secition with some basic examples of integer divisibility properties.
+
+\begin{proposition}[Exercise 2.1.6]
+	If $a$ and $b$ are both odd integers, then $a^2 - b^2$ is divisible by 8.
+\end{proposition}
+\begin{proof}
+	Notice that $a^2 - b^2 = (a - b)(a + b)$. Since $a$ and $b$ are both odd, there exist two integers $p, q$ such that 
+	\begin{align*}
+		a &= 2p + 1\\
+		b &= 2q + 1.
+	\end{align*}
+	Hence,
+	\begin{align*}
+		a^2 - b^2 &= (a - b)(a + b)\\
+		&= (2p + 1 - 2q - 1)(2p + 1 + 2q + 1)\\
+		&= 4(p - q)(p + q + 1).
+	\end{align*}
+	Now, if $p - q$ is even then there exists and integer $l$ such that $p - q = 2l$, and $a^2 - b^2$ is therefore divisible by $8$. If $p - q$ is odd, then $p - q = 2l + 1$ for some integer $l$, and so $p + q + 1 = 2l + 2q + 2$. Again, this proves $a^2 - b^2$ is divisilbe by $8$.
+\end{proof}
+
+\begin{proposition}[Exercise 2.1.7]
+	If $a$ is an odd integer, then $$a^2 + (a + 2)^2 + (a + 4)^2 + 1$$ is divisible by 12.
+\end{proposition}
+\begin{proof}
+	We begin by expanding the sum in question: $$a^2 + (a + 2)^2 + (a + 4)^2 + 1 = 3a^2 + 12a + 21.$$ Since $a$ is odd, there exists an integer $b$ such that $a = 2b + 1$. Thus,
+	\begin{align*}
+		a^2 + (a + 2)^2 + (a + 4)^2 + 1 &= 3a^2 + 12a + 21\\
+		&= 3(a^2 + 7) + 12a\\
+		&= 3\left(\left(2b + 1\right)^2 + 7\right) + 12a\\
+		&= 3\left(4b^2 + 4b + 8\right) + 12a\\
+		&= 12\left(b^2 + b + 2\right) + 12a\\
+		&= 12\left(b^2 + b + 2 + a\right).
+	\end{align*}
+	Therefore, the specified sum is divisible by 12.
+\end{proof}
+
+
+
+
+
+
+
+
